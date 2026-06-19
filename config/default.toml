@@ -47,6 +47,8 @@ minimum_confidence = 0.2
 [plugins]
 enabled = true
 directories = ["data/plugins"]
+manifest_name = "plugin.toml"
+disabled = []
 
 [history]
 enabled = true

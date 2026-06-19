@@ -84,6 +84,8 @@ BUILTIN_DEFAULT_CONFIG: dict[str, ConfigValue] = {
     "plugins": {
         "enabled": True,
         "directories": ["data/plugins"],
+        "manifest_name": "plugin.toml",
+        "disabled": [],
     },
     "history": {
         "enabled": True,
@@ -193,6 +195,8 @@ DEFAULT_SCHEMA: dict[str, ConfigSchemaEntry] = {
     ),
     "plugins.enabled": ConfigSchemaEntry(bool),
     "plugins.directories": ConfigSchemaEntry(list),
+    "plugins.manifest_name": ConfigSchemaEntry(str, allow_empty=False),
+    "plugins.disabled": ConfigSchemaEntry(list),
     "history.enabled": ConfigSchemaEntry(bool),
     "history.max_items": ConfigSchemaEntry(int, minimum=0),
     "database.url": ConfigSchemaEntry(str, allow_empty=False),
