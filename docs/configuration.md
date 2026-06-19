@@ -27,3 +27,12 @@ Future modules can add settings by adding default values to `config/default.toml
 and registering validation rules with `ConfigManager.register_schema()`. This
 keeps the storage format and access pattern stable as themes, engines, plugins,
 audio settings, and UI preferences grow.
+
+## Logging
+
+Logging is configured through the `[logging]` section. The logging system reads
+its level, output directory, file name, message format, date format, and
+rotation settings from configuration.
+
+Application modules should not create their own logging handlers. They should
+request a logger from `LoggerManager`.
