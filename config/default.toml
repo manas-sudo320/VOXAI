@@ -1,0 +1,45 @@
+[app]
+name = "VoxAI Studio"
+environment = "production"
+log_level = "INFO"
+
+[paths]
+data_dir = "data"
+models_dir = "data/models"
+plugins_dir = "data/plugins"
+exports_dir = "exports"
+
+[ui]
+theme = "system"
+language = "en"
+remember_window_state = true
+
+[audio]
+output_format = "wav"
+sample_rate = 22050
+volume = 1.0
+
+[tts]
+engine = "piper"
+default_voice = ""
+speaking_rate = 1.0
+
+[translation]
+engine = "argos"
+default_source_language = "auto"
+default_target_language = "en"
+
+[language_detection]
+engine = "lingua"
+minimum_confidence = 0.2
+
+[plugins]
+enabled = true
+directories = ["data/plugins"]
+
+[history]
+enabled = true
+max_items = 500
+
+[database]
+url = "sqlite:///voxai_studio.db"

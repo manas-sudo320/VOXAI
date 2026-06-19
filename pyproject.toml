@@ -1,0 +1,12 @@
+[project]
+name = "voxai-studio"
+version = "0.1.0"
+description = "Offline-first AI text-to-speech, translation, and document reader desktop application."
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
